@@ -213,21 +213,35 @@
                         </p>
                     </div>
 
-                    <div id="forgot-sec" class="auth-section">
-                        <h2 class="text-center mb-1">Reset Password</h2>
-                        <p class="text-center text-white-50 mb-4">We'll send you a link to reset your password</p>
-                        <form>
-                            <div class="mb-4">
-                                <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Enter your registered email"
-                                    required>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Send Reset Link</button>
-                        </form>
-                        <p class="text-center mt-4 mb-0 small">
-                            Back to <span class="toggle-link" onclick="showSection('login-sec')">Login</span>
-                        </p>
-                    </div>
+                   <div id="forgot-sec" class="auth-section">
+    <h2 class="text-center mb-1">Reset Password</h2>
+    <p class="text-center text-white-50 mb-4">Reset your password</p>
+
+    <form action="forgot.php" method="POST">
+        <div class="mb-4">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control"
+                   placeholder="Enter your registered email"
+                   name="email" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">New Password</label>
+            <input type="password" class="form-control"
+                   placeholder="Enter your new password"
+                   name="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100" name="reset">
+            Reset
+        </button>
+    </form>
+
+    <p class="text-center mt-4 mb-0 small">
+        Back to <span class="toggle-link" onclick="showSection('login-sec')">Login</span>
+    </p>
+</div>
+
 
                 </div>
             </div>
